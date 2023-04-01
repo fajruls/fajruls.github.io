@@ -27,9 +27,8 @@
   </head>
 
   <body id="page-top">
-
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-shrink" id="mainNav">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">SARANA DAN PRASARANA</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,7 +53,7 @@
       </div>
     </nav>
 
-    <header class="masthead text-center text-white d-flex">
+    <header class="jumbotron text-center text-dark d-flex bg-white" style="margin-bottom: -220px;">
       <div class="container my-auto">
         <div class="row">
           <div class="col-lg-10 mx-auto">
@@ -64,7 +63,10 @@
             <hr>
           </div>
           <div class="col-lg-8 mx-auto">
-            <p class="text-faded">Aplikasi Untuk Peminjaman Sarana dan Prasarana Sekolah</p>
+            <img src="<?= base_url('assets/landing_page_assets/img/cuate.png') ?>" class="img-fluid" alt="" style="width: 500px">
+          </div>
+          <div class="col-lg-8 mx-auto text-dark">
+            <p class="text-faded text-dark">Aplikasi Untuk Peminjaman Sarana dan Prasarana Sekolah</p>
             <p class="text-monospace ">
               <?php /* $c0 = $this->encrypt->decode($sql_query); $c1 = $this->encrypt->decode($c0); $c2 = $this->encrypt->decode($c1); echo $c2; */?>
               <?php $c0 = $this->encrypt->decode($sql_query0); $c1 = $this->encrypt->decode($c0); $c2 = $this->encrypt->decode($c1); echo $c2; ?>
@@ -75,6 +77,8 @@
         </div>
       </div>
     </header>
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#2196f3" fill-opacity="1" d="M0,32L48,69.3C96,107,192,181,288,192C384,203,480,149,576,154.7C672,160,768,224,864,224C960,224,1056,160,1152,128C1248,96,1344,96,1392,96L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
 
     <section class="bg-primary" id="about">
       <div class="container">
@@ -270,7 +274,7 @@
     <script src="assets/landing_page_assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
     <!-- Custom scripts for this template -->
-    <script src="assets/landing_page_assets/js/creative.min.js"></script>
+    <script src="assets/landing_page_assets/js/creative.js"></script>
 
   </body>
 
