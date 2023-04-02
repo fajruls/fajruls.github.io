@@ -48,38 +48,5 @@ class Admin extends PX_Controller {
 		$this->load->view('backend/index',$data);
 	}
 
-	function do_login() {
-		$username = $this->input->post('username');
-		$password = $this->input->post('password');
-		$user_data = $this->model_basic->select_where('tbl_petugas','username',$username)->row();
-		if($user_data){
-			if($this->encrypt->decode($user_data->password) == $password){
-				$data_user = array(
-					'id_petugas' => $user_data->id_petugas,
-					'username' => $user_data->username,
-					'password' => $password,
-					'name' => $user_data->name,
-					'email' => $user_data->email,
-					'photo' => $user_data->photo
-					);
-				$this->session->set_userdata('petugas',$data_user);
-				$this->returnJson(array('status' => 'ok','msg' => 'Login berhasil, anda akan di alihkan.','redirect' => 'dashboard'));
-			}
-			else
-				$this->returnJson(array('status' => 'error','msg' => 'Login gagal, password anda salah.'));
-		}
-		else
-			$this->returnJson(array('status' => 'error','msg' => 'Login gagal, username tidak terdaftar.'));
-	}
-
-	function do_logout() {
-		if($this->session->userdata('petugas') != FALSE){
-			$this->session->unset_userdata('petugas');
-			redirect('home');
-		}
-		else
-			redirect('home');
-	}
-
 
 }

@@ -102,7 +102,7 @@
                           <a href="<?php echo base_url('member_system/riwayat') ?>"><i class="fa fa-history fa-fw"></i> Riwayat Peminjaman</a>
                         </li>
                         <li>
-                          <a href="<?php echo base_url('member/do_logout') ?>"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                          <a href="<?php echo base_url('auth/do_logout') ?>"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
 
                     </ul>

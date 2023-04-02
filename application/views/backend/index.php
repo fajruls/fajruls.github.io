@@ -132,7 +132,7 @@
                             </ul>
                         </li>
                         <li>
-                          <a href="<?php echo base_url('admin/do_logout') ?>"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                          <a href="<?php echo base_url('auth/do_logout') ?>"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
 
                     </ul>
